@@ -1,0 +1,14 @@
+__pycache__/
+.DS_Store
+.vscode/
+
+data/
+datasets/
+
+checkpoints/
+models/
+
+*.pt
+*.pth
+*.ckpt
+*.pkl
