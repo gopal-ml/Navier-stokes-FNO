@@ -411,10 +411,12 @@ def solve_cavity_driven(
                     f"CFL={cfl:.4f}"
                 )
         
-    return (
-        u_snapshots,
-        v_snapshots,
-        p_snapshots,
-        x.cpu(),
-        y.cpu()
-    )
+    return {
+        "u_hist": u_snapshots,
+        "v_hist": v_snapshots,
+        "p_hist": p_snapshots,
+        "x": x.cpu(),
+        "y": y.cpu(),
+        "nu": nu,
+        "dt": dt
+    }

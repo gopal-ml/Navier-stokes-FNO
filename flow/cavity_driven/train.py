@@ -221,7 +221,7 @@ for epoch in range(epochs):
 
         torch.save(
             checkpoint,
-            "flow/cavity_driven/checkpoints/best_fno_64_no_sub.pt"
+            "flow/cavity_driven/checkpoints/best_fno_64_no_sub_8.pt"
         )
 
     if epoch % 1 == 0:

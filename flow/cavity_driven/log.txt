@@ -1,0 +1,61 @@
+23 june 2026 
+hidden layers increased to 8
+
+python -m flow.cavity_driven.train                                     
+Using: cpu
+Dataset Loaded...
+Train, Val sets created...
+Model Defined...
+Optimiser and Scheduler defined...
+Training Starts: 
+Epoch:   0 | Train: 1.008460 | Val: 0.709762 | Time:  169.09s
+Epoch:   1 | Train: 0.365423 | Val: 0.059668 | Time:  158.84s
+Epoch:   2 | Train: 0.026122 | Val: 0.012809 | Time:  163.37s
+Epoch:   3 | Train: 0.010048 | Val: 0.007406 | Time:  164.16s
+Epoch:   4 | Train: 0.006317 | Val: 0.004913 | Time:  159.75s
+Epoch:   5 | Train: 0.004306 | Val: 0.003382 | Time:  160.08s
+Epoch:   6 | Train: 0.003126 | Val: 0.002664 | Time:  157.92s
+Epoch:   7 | Train: 0.002440 | Val: 0.002039 | Time:  157.79s
+Epoch:   8 | Train: 0.001967 | Val: 0.001646 | Time:  158.35s
+Epoch:   9 | Train: 0.001620 | Val: 0.001399 | Time:  169.34s
+Epoch:  10 | Train: 0.001369 | Val: 0.001121 | Time:  1016.16s
+Epoch:  11 | Train: 0.001161 | Val: 0.001185 | Time:  157.11s
+Epoch:  12 | Train: 0.001005 | Val: 0.000826 | Time:  157.19s
+Epoch:  13 | Train: 0.000857 | Val: 0.000732 | Time:  191.89s
+Epoch:  14 | Train: 0.000733 | Val: 0.000623 | Time:  184.55s
+Epoch:  15 | Train: 0.000608 | Val: 0.000567 | Time:  158.22s
+Epoch:  16 | Train: 0.000541 | Val: 0.000454 | Time:  291.46s
+Epoch:  17 | Train: 0.000470 | Val: 0.000406 | Time:  333.52s
+Epoch:  18 | Train: 0.000400 | Val: 0.000387 | Time:  309.78s
+Epoch:  19 | Train: 0.000362 | Val: 0.000317 | Time:  304.85s
+Epoch:  20 | Train: 0.000302 | Val: 0.000275 | Time:  305.30s
+Epoch:  21 | Train: 0.000268 | Val: 0.000251 | Time:  173.61s
+Epoch:  22 | Train: 0.000242 | Val: 0.000236 | Time:  159.57s
+Epoch:  23 | Train: 0.000218 | Val: 0.000202 | Time:  158.44s
+Epoch:  24 | Train: 0.000193 | Val: 0.000192 | Time:  157.62s
+Epoch:  25 | Train: 0.000177 | Val: 0.000184 | Time:  157.61s
+Epoch:  26 | Train: 0.000162 | Val: 0.000170 | Time:  157.46s
+Epoch:  27 | Train: 0.000150 | Val: 0.000155 | Time:  157.91s
+Epoch:  28 | Train: 0.000136 | Val: 0.000151 | Time:  157.83s
+Epoch:  29 | Train: 0.000123 | Val: 0.000133 | Time:  157.41s
+Epoch:  30 | Train: 0.000121 | Val: 0.000149 | Time:  156.90s
+Epoch:  31 | Train: 0.000110 | Val: 0.000123 | Time:  158.07s
+Epoch:  32 | Train: 0.000101 | Val: 0.000116 | Time:  157.29s
+Epoch:  33 | Train: 0.000096 | Val: 0.000112 | Time:  157.51s
+Epoch:  34 | Train: 0.000090 | Val: 0.000111 | Time:  157.67s
+Epoch:  35 | Train: 0.000084 | Val: 0.000101 | Time:  157.91s
+Epoch:  36 | Train: 0.000083 | Val: 0.000109 | Time:  157.65s
+Epoch:  37 | Train: 0.000085 | Val: 0.000101 | Time:  157.46s
+Epoch:  38 | Train: 0.000073 | Val: 0.000090 | Time:  206.10s
+Epoch:  39 | Train: 0.000070 | Val: 0.000089 | Time:  157.12s
+Epoch:  40 | Train: 0.000074 | Val: 0.000083 | Time:  157.77s
+Epoch:  41 | Train: 0.000063 | Val: 0.000106 | Time:  157.52s
+Epoch:  42 | Train: 0.000066 | Val: 0.000083 | Time:  156.45s
+Epoch:  43 | Train: 0.000065 | Val: 0.000079 | Time:  157.05s
+Epoch:  44 | Train: 0.000073 | Val: 0.000070 | Time:  157.24s
+Epoch:  45 | Train: 0.000074 | Val: 0.000090 | Time:  156.78s
+Epoch:  46 | Train: 0.000054 | Val: 0.000077 | Time:  157.50s
+Epoch:  47 | Train: 0.000055 | Val: 0.000073 | Time:  157.81s
+Epoch:  48 | Train: 0.000052 | Val: 0.000068 | Time:  158.02s
+Epoch:  49 | Train: 0.000050 | Val: 0.000059 | Time:  180.74s
+Total Time taken :  9686.71s
