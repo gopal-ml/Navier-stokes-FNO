@@ -1,0 +1,85 @@
+======================================================================
+28-06-2026_17-23-52 - FNO3D TRAINING
+======================================================================
+Device              : mps
+Training Samples    : 2400
+Validation Samples  : 600
+Epochs              : 10
+Batch Size          : 8
+Learning Rate       : 0.001
+
+Comments - " Too Long " 
+
+======================================================================
+28/06/2026  17:50:16 - FNO3D TRAINING
+======================================================================
+Device              : cpu
+Training Samples    : 2400
+Validation Samples  : 600
+Epochs              : 10
+Batch Size          : 4
+Learning Rate       : 0.001
+
+Epoch:   0 | Train: 0.000231 | Val: 0.000002 | Time:  513.39s
+
+
+======================================================================
+28/06/2026  18:43:14 - FNO3D TRAINING
+======================================================================
+Device              : mps
+Training Samples    : 2400
+Validation Samples  : 600
+Epochs              : 10
+Batch Size          : 4
+Learning Rate       : 0.001
+
+Epoch:   0 | Train: 0.211658 | Val: 0.099167 | Time:  334.88s
+Epoch:   1 | Train: 0.091916 | Val: 0.091933 | Time:  297.82s
+Epoch:   2 | Train: 0.094628 | Val: 0.092837 | Time:  306.19s
+Epoch:   3 | Train: 0.134762 | Val: 0.178002 | Time:  287.79s
+Epoch:   4 | Train: 0.255610 | Val: 0.190701 | Time:  289.19s
+Epoch:   5 | Train: 0.334996 | Val: 0.244918 | Time:  292.80s
+======================================================================
+28/06/2026  19:17:51 - FNO3D TRAINING
+======================================================================
+Device              : mps
+Training Samples    : 2400
+Validation Samples  : 600
+Epochs              : 10
+Batch Size          : 4
+Learning Rate       : 0.001
+
+======================================================================
+28/06/2026  19:18:48 - FNO3D TRAINING
+======================================================================
+Device              : mps
+Training Samples    : 2400
+Validation Samples  : 600
+Epochs              : 10
+Batch Size          : 4
+Learning Rate       : 0.001
+
+Epoch:   0 | Train: 1.447135 | Val: 0.550417 | Time:  1286.75s
+
+
+======================================================================
+28/06/2026  20:50:33 - FNO3D TRAINING
+======================================================================
+Device              : mps
+Training Samples    : 2400
+Validation Samples  : 600
+Epochs              : 10
+Batch Size          : 4
+Learning Rate       : 0.001
+
+Epoch:   0 | Train: 2.309521 | Val: 1.176600 | Time:  1551.49s
+Epoch:   1 | Train: 1.498248 | Val: 0.737678 | Time:  1423.11s
+Epoch:   2 | Train: 5.906423 | Val: 7.864554 | Time:  1140.90s
+Epoch:   3 | Train: 20652.770959 | Val: 593.258956 | Time:  1275.40s
+Epoch:   4 | Train: 227.768316 | Val: 40.710437 | Time:  1133.94s
+Epoch:   5 | Train: 23.911644 | Val: 28.822154 | Time:  1997.89s
+Epoch:   6 | Train: 7.653851 | Val: 1.783397 | Time:  1028.11s
+Epoch:   7 | Train: 18.586644 | Val: 1.080219 | Time:  1050.79s
+Epoch:   8 | Train: 2.486400 | Val: 1.451783 | Time:  2166.92s
+Epoch:   9 | Train: 1.532818 | Val: 1.649809 | Time:  989.59s
+Total Time taken :  13758.29s -> ~ 4hrs

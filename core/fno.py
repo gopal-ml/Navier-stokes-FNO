@@ -44,13 +44,6 @@ class FNO1d(nn.Module):
         layer = self.layers[-1]
         x = layer['spectral'](x) + layer['local'](x)
         return self.project(x)
-        
-# x = torch.randn(4, 2, 1024)
-# model = FNO1d(modes=16, width=64)
-# y = model(x)
-
-# print(y.shape)
-
 
 
 class FNO2d(nn.Module):
