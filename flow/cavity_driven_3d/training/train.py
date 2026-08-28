@@ -168,6 +168,10 @@ log(f"Epochs              : {epochs}")
 log(f"Batch Size          : {batch_size}")
 log(f"Learning Rate       : {optimizer.param_groups[0]['lr']}")
 
+log(f"Modes X             : {modesx}")
+log(f"Modes Y             : {modesy}")
+log(f"Modes Z             : {modesz}")
+
 log("")
 
 training_start = time.time()
