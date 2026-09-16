@@ -18,7 +18,7 @@ The input includes velocity, viscosity, and coordinates (7 channels). The target
 
 ## Requirements
 
-Run commands from the `Navier` directory so that imports such as `flow...` and `core...` resolve correctly.
+Run commands from the `Navier` directory so package imports such as `flow.cavity_driven_3d...` and `core...` resolve correctly. Use Python module paths (dots) to run the scripts.
 
 ```bash
 cd Navier
@@ -29,7 +29,7 @@ The scripts automatically use MPS (Apple Silicon), then CUDA, then CPU for train
 
 ## 1. Generate raw CFD data
 
-Edit the experiment settings at the top of `flow/cavity_driven_3d/dataset/generate_raw_data.py`:
+Edit the experiment settings in `flow.cavity_driven_3d.dataset.generate_raw_data` (`flow/cavity_driven_3d/dataset/generate_raw_data.py` on disk):
 
 | Setting | Purpose | Current value |
 | --- | --- | --- |
@@ -43,7 +43,7 @@ Edit the experiment settings at the top of `flow/cavity_driven_3d/dataset/genera
 Then run:
 
 ```bash
-python flow/cavity_driven_3d/dataset/generate_raw_data.py
+python -m flow.cavity_driven_3d.dataset.generate_raw_data
 ```
 
 Each run creates `flow/cavity_driven_3d/data/raw/cavity3d_nu_*.pt`. A raw file stores `u_hist`, `v_hist`, `w_hist`, `p_hist`, the coordinate vectors, and solver metadata.
@@ -60,16 +60,16 @@ The builder turns every consecutive pair of saved snapshots into one training ex
 
 ```bash
 mkdir -p flow/cavity_driven_3d/data/processed
-python flow/cavity_driven_3d/dataset/build_dataset.py
+python -m flow.cavity_driven_3d.dataset.build_dataset
 ```
 
-By default the builder writes `validation_dataset.pt`, while the training script reads `dataset.pt`. Choose one consistent filename before training. For the training script as currently written, change the bottom of `build_dataset.py` to:
+By default the builder writes `validation_dataset.pt`, while the training script reads `dataset.pt`. Choose one consistent filename before training. For the training script as currently written, change the bottom of `flow.cavity_driven_3d.dataset.build_dataset` to:
 
 ```python
 save_path="flow/cavity_driven_3d/data/processed/dataset.pt",
 ```
 
-and run the builder again. Alternatively, change the dataset path in `training/train.py` to `validation_dataset.pt`.
+and run the builder again. Alternatively, change the dataset path in `flow.cavity_driven_3d.training.train` to `validation_dataset.pt`.
 
 The processed file contains:
 
@@ -81,10 +81,10 @@ These dense tensors can be large. Do not accidentally commit `data/raw/*.pt`, `d
 
 ## 3. Train the FNO
 
-Review the configuration in `flow/cavity_driven_3d/training/train.py`, then run:
+Review the configuration in `flow.cavity_driven_3d.training.train`, then run:
 
 ```bash
-python flow/cavity_driven_3d/training/train.py
+python -m flow.cavity_driven_3d.training.train
 ```
 
 The supplied split trains on viscosities `0.005` through `0.040` and validates on unseen viscosities `0.045` and `0.050`. This tests interpolation/extrapolation across the physical parameter rather than randomly mixing neighboring time snapshots from the same simulation into both splits.
