@@ -33,12 +33,12 @@ save_every = 5
 
 pressure_iterations = 100
 
-# nu_values = torch.linspace(
-#     0.005,
-#     0.05,
-#     10,
-# ).tolist()
-nu_values = [0.1]
+nu_values = torch.linspace(
+    0.005,
+    0.05,
+    10,
+).tolist()
+# nu_values = [0.1]
 
 
 # ============================================================

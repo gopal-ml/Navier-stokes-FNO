@@ -144,5 +144,5 @@ if __name__ == "__main__":
 
     build_dataset(
         raw_dir="flow/cavity_driven_3d/data/raw/",
-        save_path="flow/cavity_driven_3d/data/processed/dataset.pt",
+        save_path="flow/cavity_driven_3d/data/processed/validation_dataset.pt",
     )
