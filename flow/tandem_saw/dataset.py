@@ -37,13 +37,21 @@ class TandemSAWDataset(Dataset):
         self.X = torch.as_tensor(data["X"], dtype=torch.float32)
         self.Y = torch.as_tensor(data["Y"], dtype=torch.float32)
         self.case_id = [str(v) for v in data["case_id"]]
-        self.input_channels = [str(name) for name in data.get(
-            "input_channels", [f"input_{i}" for i in range(self.X.shape[1])]
-        )]
-        self.output_channels = [str(name).strip().lower() for name in data.get(
-            "output_channels", [f"output_{i}" for i in range(self.Y.shape[1])]
-        )]
-        self.coordinates = {name: data[name] for name in ("x", "y", "z") if name in data}
+        self.input_channels = [
+            str(name)
+            for name in data.get(
+                "input_channels", [f"input_{i}" for i in range(self.X.shape[1])]
+            )
+        ]
+        self.output_channels = [
+            str(name).strip().lower()
+            for name in data.get(
+                "output_channels", [f"output_{i}" for i in range(self.Y.shape[1])]
+            )
+        ]
+        self.coordinates = {
+            name: data[name] for name in ("x", "y", "z") if name in data
+        }
 
         if self.X.ndim != 5 or self.Y.ndim != 5:
             raise ValueError("X and Y must have shape [samples, channels, Nx, Ny, Nz]")

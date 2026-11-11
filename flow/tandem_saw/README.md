@@ -31,13 +31,14 @@ Each sample pairs one current snapshot and its conditioning channels with the ne
 
 ## Train and validate
 
-Run from the repository root and reserve one or more entire case IDs for validation:
+Run from the repository root and reserve one or more entire case IDs for validation. Each run gets its own timestamped folder under `runs/`, with a full `run.log`, exact `config.json`, epoch-by-epoch `history.jsonl`, `summary.json`, and best checkpoint:
 
 ```bash
 python -m flow.tandem_saw.training \
   --data flow/tandem_saw/data/author_fields.pt \
   --val-cases Case4 \
-  --output-dir flow/tandem_saw/runs/first \
+  --runs-dir flow/tandem_saw/runs \
+  --run-name case4_validation \
   --epochs 100
 ```
 
@@ -48,10 +49,14 @@ Normalization statistics are calculated from training cases only. Validation rep
 ```bash
 python -m flow.tandem_saw.visualize \
   --data flow/tandem_saw/data/author_fields.pt \
-  --checkpoint flow/tandem_saw/runs/first/best_fno3d.pt \
+  --checkpoint flow/tandem_saw/runs/case4_validation/best_fno3d.pt \
   --sample 0 \
   --field u \
-  --output flow/tandem_saw/runs/first/u_case.png
+  --output flow/tandem_saw/runs/case4_validation/u_case.png
 ```
 
 The plot compares the author's target, the FNO prediction, and signed error on the XY, XZ, and YZ mid-planes. Use `u`, `v`, `w`, or `p` if pressure is included in `Y`.
+
+## Notebook workflow
+
+Open `saw_flow_workflow.ipynb` from the repository root. It loads the dataset module, calls the training function, plots the training and validation history, compares a held-out sample, and displays the run configuration and detailed log. Set `DATA_PATH`, `VALIDATION_CASES`, and the training options in its setup cells after the author data is prepared.
